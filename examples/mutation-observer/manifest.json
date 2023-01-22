@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Communicating between extension and page",
+  "version": "1.0.0",
+  "author": "Liron Burrack",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.example.com/*"
+      ],
+      "run_at": "document_end",
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "injected-script.js"],
+      "matches": [ "https://*.example.com/*"]
+    }
+  ]
+}
