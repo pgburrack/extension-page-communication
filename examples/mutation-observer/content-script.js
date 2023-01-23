@@ -19,7 +19,7 @@ function injectedScript() {
   script.onload = function (e) {
     observeChanges();
   }
-  script.src =  chrome.runtime.getURL('injected-script.js');
+  script.src = chrome.runtime.getURL('injected-script.js');
 
  (document.head || document.documentElement).appendChild(script);
 }
