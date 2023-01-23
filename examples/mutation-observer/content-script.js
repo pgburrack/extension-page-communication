@@ -37,9 +37,10 @@ function observeChanges () {
       if (mutation.attributeName === 'data-msg-to-extension') {
         const scriptTag = mutation.target;
         const msgToExtension = scriptTag.getAttribute(mutation.attributeName);
-        console.log('IN EXTENSION: ', msgToExtension);
-        if (msgToExtension === 'hello extension') {
-          const newMessage = 'hello page';
+        console.log('%cMESSAGE FROM PAGE: ', 'font-weight: bold; color: green; font-size: 30px');
+        console.log(`%c${msgToExtension}`, 'font-size: 30px');
+        if (msgToExtension === 'Hi extension!') {
+          const newMessage = 'Hi page!';
           /*
             Send a message back to the page
           */

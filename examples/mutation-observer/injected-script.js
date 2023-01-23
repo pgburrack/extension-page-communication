@@ -2,7 +2,7 @@
   document.getElementById('cool-btn').addEventListener('click', () => {
     // Grabbing our script tag.
     const ourScriptTag = document.getElementById('DEBUGGER');
-    const newMessage = 'hello extension';
+    const newMessage = 'Hi extension!';
     // Updating `data-msg-to-extension` attribute value from '' to 'hello extension'
     ourScriptTag.dataset.msgToExtension = newMessage;
   });
@@ -27,7 +27,8 @@
         const scriptTag = mutation.target;
         const msgToPage = scriptTag.getAttribute(mutation.attributeName);
 
-        console.log('IN PAGE: ', msgToPage);
+        console.log('%cMESSAGE FROM EXTENSION: ', 'font-weight: bold; color: red; font-size: 30px');
+        console.log(`%c${msgToPage}`, 'font-size: 30px');
         // Outout: "Hello page"
       }
     });
