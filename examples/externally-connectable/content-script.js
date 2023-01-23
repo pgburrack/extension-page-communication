@@ -2,6 +2,7 @@ function injectedScript() {
   const script = document.createElement('script');
   script.type = 'text/javascript';
   script.id = 'EXTENSION-EXAMPLE';
+  script.dataset.extensionId = chrome.runtime.id;
   script.onload = function (e) {
 
   }
